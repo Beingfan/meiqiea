@@ -1,0 +1,208 @@
+Uri: https://downloads.meiqiausercontent.com/website/assets/global/bg_increase.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\website\assets\global\bg_increase.png
+Content Type: image/png
+
+Uri: https://downloads.meiqiausercontent.com/website/assets/global/bg_increase_eng.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\website\assets\global\bg_increase_eng.png
+Content Type: image/png
+
+Uri: https://downloads.meiqiausercontent.com/website/assets/global/icon_menu.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\website\assets\global\icon_menu.png
+Content Type: image/png
+
+Uri: https://downloads.meiqiausercontent.com/website/assets/global/icon_menu_close.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\website\assets\global\icon_menu_close.png
+Content Type: image/png
+
+Uri: https://downloads.meiqiausercontent.com/website/assets/global/info-fill.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\website\assets\global\info-fill.svg
+Content Type: image/svg+xml
+
+Uri: https://downloads.meiqiausercontent.com/website/assets/index/banner_bg@2x.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\website\assets\index\banner_bg@2x.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/
+File Name: E:\桌面\meiqiaa-pc.vercel.app\index.htm
+Content Type: text/html
+
+Uri: https://meiqiaa-pc.vercel.app/resource/4778fadcf844610f.css
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\4778fadcf844610f.css
+Content Type: text/css
+
+Uri: https://meiqiaa-pc.vercel.app/resource/8b003f0fcafa809e.css
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\8b003f0fcafa809e.css
+Content Type: text/css
+
+Uri: https://meiqiaa-pc.vercel.app/resource/banner_client_logo.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\banner_client_logo.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/brand.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\brand.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/client_logo_banyu.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\client_logo_banyu.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/client_logo_decathlon_color.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\client_logo_decathlon_color.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/client_logo_dongyirisheng.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\client_logo_dongyirisheng.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/client_logo_lanqianbi.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\client_logo_lanqianbi.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/client_logo_ziyou.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\client_logo_ziyou.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/favico.js.download
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\favico.js.download
+Content Type: application/octet-stream
+
+Uri: https://meiqiaa-pc.vercel.app/resource/feature_card_1@2x.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\feature_card_1@2x.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/feature_card_2@2x.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\feature_card_2@2x.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/feature_card_3@2x.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\feature_card_3@2x.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/feature_card_4.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\feature_card_4.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/highlight_03@2x(1).png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\highlight_03@2x(1).png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/highlight_03@2x.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\highlight_03@2x.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/highlight_clients.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\highlight_clients.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/highlight_fast.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\highlight_fast.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/highlight_open.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\highlight_open.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/highlight_professional.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\highlight_professional.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/highlight_smooth.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\highlight_smooth.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/highlight_stable.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\highlight_stable.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_arrow(1).png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_arrow(1).png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_arrow.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_arrow.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_call_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_call_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_decoration.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_decoration.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_develop_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_develop_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_docs_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_docs_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_download_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_download_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_education.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_education.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_enterprise.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_enterprise.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_government.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_government.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_marketing_reach_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_marketing_reach_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_marketing_robot_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_marketing_robot_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_medical.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_medical.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_nav_private.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_nav_private.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_robot_call_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_robot_call_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_robot_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_robot_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_scrm_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_scrm_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_service_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_service_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_shakeshop_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_shakeshop_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_ticket_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_ticket_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/icon_wechat_gray.png
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\icon_wechat_gray.png
+Content Type: image/png
+
+Uri: https://meiqiaa-pc.vercel.app/resource/nav_logo.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\nav_logo.svg
+Content Type: image/svg+xml
+
+Uri: https://meiqiaa-pc.vercel.app/resource/panda_qrcode.svg
+File Name: E:\桌面\meiqiaa-pc.vercel.app\resource\panda_qrcode.svg
+Content Type: image/svg+xml
+
