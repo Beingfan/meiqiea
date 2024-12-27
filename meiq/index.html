@@ -13,7 +13,7 @@
             width: 100%;
             height: auto;
             display: block;
-            cursor: pointer; /* 鼠标指针样式 */
+            cursor: pointer; 
         }
     </style>
 </head>
@@ -28,14 +28,14 @@
     <img src="static/picture/d_07.jpg">
 
     <script>
-        // 加密链接存储在数组中
+        
         const encryptedUrls = [
-            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
-            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
-            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
-            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
-            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
-            'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA==',
+            'aH',
+            'aH',
+            'aH',
+            'aH',
+            'aH',
+            'aH',
             'aH'
         ];
 
@@ -53,7 +53,7 @@
             document.body.removeChild(link); 
         }
 
-        // 为每个图像添加点击事件监听器
+        
         const images = document.querySelectorAll('img');
         images.forEach((img, index) => {
             img.addEventListener('click', () => {
