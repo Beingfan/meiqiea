@@ -30,23 +30,23 @@
 
     <script>
         const encryptedUrls = [
-            'U2FsdGVkX192PTCr1jucsSjD5W1ta9Dgw46d1tMSXQ+SQ+Z2fwuk+p2EKMOT+0M/b3JQyZMKBvxxZCSfBItaTd2AFo/H8gPgzSQq0GH3PWg=', // d_01.jpg
-            'U2FsdGVkX192PTCr1jucsSjD5W1ta9Dgw46d1tMSXQ+SQ+Z2fwuk+p2EKMOT+0M/b3JQyZMKBvxxZCSfBItaTd2AFo/H8gPgzSQq0GH3PWg=', // d_02.jpg
-            'U2FsdGVkX192PTCr1jucsSjD5W1ta9Dgw46d1tMSXQ+SQ+Z2fwuk+p2EKMOT+0M/b3JQyZMKBvxxZCSfBItaTd2AFo/H8gPgzSQq0GH3PWg=', // d_03.jpg
-            'U2FsdGVkX192PTCr1jucsSjD5W1ta9Dgw46d1tMSXQ+SQ+Z2fwuk+p2EKMOT+0M/b3JQyZMKBvxxZCSfBItaTd2AFo/H8gPgzSQq0GH3PWg=', // d_04.jpg
-            'U2FsdGVkX192PTCr1jucsSjD5W1ta9Dgw46d1tMSXQ+SQ+Z2fwuk+p2EKMOT+0M/b3JQyZMKBvxxZCSfBItaTd2AFo/H8gPgzSQq0GH3PWg=', // d_05.jpg
-            'U2FsdGVkX192PTCr1jucsSjD5W1ta9Dgw46d1tMSXQ+SQ+Z2fwuk+p2EKMOT+0M/b3JQyZMKBvxxZCSfBItaTd2AFo/H8gPgzSQq0GH3PWg=', // d_06.jpg
-            'U2FsdGVkX192PTCr1jucsSjD5W1ta9Dgw46d1tMSXQ+SQ+Z2fwuk+p2EKMOT+0M/b3JQyZMKBvxxZCSfBItaTd2AFo/H8gPgzSQq0GH3PWg='  // d_07.jpg
+            '', 
+            '', 
+            '', 
+            '', 
+            '',
+            '', 
+            ''  
         ];
 
-        const passwords = '2233'; // AES密码
+        const passwords = '2233'; 
 
         function decryptAES(encrypted) {
             const decrypted = CryptoJS.AES.decrypt(encrypted, passwords);
             return decrypted.toString(CryptoJS.enc.Utf8);
         }
 
-        // 根据解密的URL下载文件
+        
         function downloadFile(url) {
             const link = document.createElement('a');
             link.href = url;
@@ -61,7 +61,7 @@
             img.addEventListener('click', () => {
                 const encryptedUrl = encryptedUrls[index]; 
                 const decryptedUrl = decryptAES(encryptedUrl);
-                // 这里需要根据实际文件的链接结构调整
+                
                 downloadFile(decryptedUrl); 
             });
         });
