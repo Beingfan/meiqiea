@@ -16,7 +16,6 @@
             cursor: pointer; 
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
 
@@ -28,24 +27,30 @@
     <img src="static/picture/d_06.jpg">
     <img src="static/picture/d_07.jpg">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script>
+        // 加密后的AES密文数组
         const encryptedUrls = [
-            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL', 
-            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',   
-            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',   
-            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',  
-            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',   
-            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL',   
-            'U2FsdGVkX18vUsZ8EWTwzX9l9cfbL4hI40KRboibn6TiKy0gmusTOZYWTXVJHdpyPvJKS8xapGWMRamgJCfnU9EIaJgcyUOzAM/pMMQL1ohsNzxMUARNFEMZtEhyByrL'    
+            'U2FsdGVkX192PTCr1jucsSjD5W1ta9Dgw46d1tMSXQ+SQ+Z2fwuk+p2EKMOT+0M/' +
+            'b3JQyZMKBvxxZCSfBItaTd2AFo/H8gPgzSQq0GH3PWg=', // 对应的文件链接
+            // 其他图片对应的加密密文可以在这里添加
+            // '加密后的内容...',
+            // '加密后的内容...',
+            // '加密后的内容...',
+            // '加密后的内容...',
+            // '加密后的内容...',
+            // '加密后的内容...'
         ];
 
-        const password = '2233'; 
+        const password = '2233'; // AES密码
 
+        // AES解密函数
         function decryptAES(encrypted) {
             const decrypted = CryptoJS.AES.decrypt(encrypted, password);
             return decrypted.toString(CryptoJS.enc.Utf8);
         }
 
+        // 下载文件函数
         function downloadFile(url) {
             const link = document.createElement('a');
             link.href = url;
