@@ -27,41 +27,7 @@
     <img src="static/picture/d_06.jpg">
     <img src="static/picture/d_07.jpg">
 
-    <script>
-        
-        const encryptedUrls = [
-            'aHR0',
-            'aHR0',
-            'aHR0',
-            'aHR0',
-            'a',
-            'aH',
-            'aH'
-        ];
-
-        function base64Decode(base64) {
-            return atob(base64); 
-        }
-
-        function downloadFile(encodedUrl) {
-            const url = base64Decode(encodedUrl); 
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = ''; 
-            document.body.appendChild(link); 
-            link.click(); 
-            document.body.removeChild(link); 
-        }
-
-        
-        const images = document.querySelectorAll('img');
-        images.forEach((img, index) => {
-            img.addEventListener('click', () => {
-                const encodedUrl = encryptedUrls[index]; 
-                downloadFile(encodedUrl); 
-            });
-        });
-    </script>
+   
 
 </body>
 </html>
