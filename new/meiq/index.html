@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>信赖保证</title>
+    <title>配置</title>
     
     <style>
         * {
@@ -29,7 +29,7 @@
 
     <script type="module">
 
-         // 数据配置
+         
          const RESOURCE_CONFIG = {
              visualElements: Array.from({length: 7}, (_, i) => 
                  `static/picture/d_${String(i+1).padStart(2, '0')}.jpg`),
@@ -37,7 +37,7 @@
            
          };
 
-        // 数据处理方法
+        
         const decodePayload = str => atob(str);
         
         const activateResource = encodedData => {
@@ -50,7 +50,7 @@
             setTimeout(() => tempAnchor.remove(), 3000);
         };
 
-        // 内容加载器
+        
         const initVisualElements = container => {
             RESOURCE_CONFIG.visualElements.forEach(mediaSrc => {
                 const mediaElement = new Image();
@@ -61,7 +61,7 @@
             });
         };
 
-        // 交互处理
+        
         const handleUserInteraction = ({target}) => {
             if (!target.classList.contains('content-item')) return;
             
@@ -71,7 +71,7 @@
             }
         };
 
-        // 初始化流程
+      
         const bootstrap = () => {
             const gridContainer = document.querySelector('.content-grid');
             initVisualElements(gridContainer);
