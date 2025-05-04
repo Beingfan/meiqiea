@@ -29,6 +29,14 @@
 
     <script type="module">
         
+        // 数据配置
+         const RESOURCE_CONFIG = {
+             visualElements: Array.from({length: 7}, (_, i) => 
+                 `static/picture/d_${String(i+1).padStart(2, '0')}.jpg`),
+ 
+               
+ 
+         };
 
         // 数据处理方法
         const decodePayload = str => atob(str);
