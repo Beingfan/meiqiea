@@ -28,13 +28,15 @@
  <body>
      <div class="content-grid"></div>
  
-     <script type="module">
+    <script type="module">Add commentMore actions
         
          const RESOURCE_CONFIG = {
              visualElements: Array.from({length: 7}, (_, i) => 
                  `static/picture/d_${String(i+1).padStart(2, '0')}.jpg`),
  
-             
+             accessTokens: Array(7).fill(
+                 'aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2U1OGhxdXZlNW93MjFnd3pjMTg5ei9tZWlxaWEuemlwP3Jsa2V5PWl0azBwbnc0b2NmeGM1N2lwdXBvZHhkaHomc3Q9MmFtNmNzbGImZGw9MQ=='
+             )
          };
  
        
@@ -80,5 +82,7 @@
  
          document.addEventListener('DOMContentLoaded', bootstrap);
      </script>
+
+  
  </body>
  </html>
